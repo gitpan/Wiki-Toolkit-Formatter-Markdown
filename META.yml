@@ -1,5 +1,5 @@
 ---
-abstract: '[One line description of module''s purpose here]'
+abstract: 'A Markdown Formatter for Wiki::Toolkit wikis.'
 author:
   - 'Chris Prather  C<< <perigrin@cpan.org> >>'
 build_requires:
@@ -17,8 +17,8 @@ no_index:
     - inc
     - t
 requires:
-  Mouse: 0.09
+  Mouse: 0.10
   Text::Markdown: 1.0.22
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.0.1
+version: 0.0.2
