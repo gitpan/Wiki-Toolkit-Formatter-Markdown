@@ -1,25 +1,15 @@
-package Wiki::Toolkit::Formatter::Markdown;
+package Wiki::Toolkit::Formatter::MultiMarkdown;
 use Mouse;
-our $VERSION = '0.0.3';
-use Text::Markdown;
-
-has args => (
-    isa        => 'HashRef',
-    is         => 'ro',
-    auto_deref => 1,
-    lazy_build => 1,
-);
-
-sub _build_args { {} }
+extends qw(Wiki::Toolkit::Formatter::Markdown)
 
 has markdown => (
-    isa        => 'Text::Markdown',
+    isa        => 'Text::MultiMarkdown',
     is         => 'ro',
     lazy_build => 1,
     handles    => { format => 'markdown' },
 );
 
-sub _build_markdown { Text::Markdown->new( $_[0]->args ) }
+sub _build_markdown { Text::MultiMarkdown->new( $_[0]->args ) }
 
 1;
 
